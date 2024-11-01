@@ -1,22 +1,13 @@
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
+import { Button } from './components/ui/button'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to the Insurance CRM
-        </h1>
-        <p className="mt-3 text-2xl">
-          Manage your leads and streamline your workflow
-        </p>
-        <div className="mt-6">
-          <Link href="/dashboard">
-            <Button>Go to Dashboard</Button>
-          </Link>
-        </div>
-      </main>
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <h1 className="text-4xl font-bold mb-8">Welcome to Insurance CRM</h1>
+      <Link href="/dashboard">
+        <Button>Go to Dashboard</Button>
+      </Link>
+    </main>
   )
 }
